@@ -1,0 +1,23 @@
+services:
+  mysql:
+    container_name: MySQL-DB
+    image: mysql:9.4
+    environment:
+      - MYSQL_ROOT_PASSWORD=00000000
+    ports:
+      - "3306:3306"
+    volumes:
+      - "mysql-data:/var/lib/mysql"
+
+  apache:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: Apache-HTTP-server
+    ports:
+      - "80:80"
+    volumes:
+      - "./apacheRoot:/var/www/html"
+
+volumes:
+  mysql-data:
