@@ -1,4 +1,12 @@
 services:
+
+  mongo:
+    image: mongo:8.0-noble
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=00000000
+    ports:
+      - "27017:27017"
   mysql:
     container_name: MySQL-DB
     image: mysql:9.4
