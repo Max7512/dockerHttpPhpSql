@@ -1,6 +1,6 @@
-# Serveurs MySQL et Apache avec PHP 
+# Serveurs MySQL, MongoDB et Apache avec PHP 
 
-Ce projet permet de lancer facilement un serveur Apache incluant PHP ainsi qu'un serveur MySQL, il permet aussi de configurer les différents services.
+Ce projet permet de lancer facilement un serveur Apache incluant PHP ainsi qu'un serveur MySQL ou MongoDB, il permet aussi de configurer les différents services.
 
 ## Configurations
 
@@ -32,7 +32,9 @@ L'emplacement du répertoire à utiliser comme racine est définit dans apache.v
 
 ### Mot de passe racine de la base de données
 
-Le mot de passe est définit dans la variable d'environnement MYSQL_ROOT_PASSWORD dans mysql.environment, le nom d'utilisateur associé est root et ne peut être changé
+Le mot de passe est définit dans la variable d'environnement MYSQL_ROOT_PASSWORD dans mysql.environment, le nom d'utilisateur associé est root et ne peut être changé.
+
+Pour Mongo il s'agit de la variable MONGO_INITDB_ROOT_PASSWORD, un nom d'utilisateur peut être changé avec MONGO_INITDB_ROOT_USERNAME mais n'est pas nécessaire.
 
 ## Lancer, arrêter et redémarrer les serveurs
 
