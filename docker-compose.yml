@@ -7,6 +7,9 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=00000000
     ports:
       - "27017:27017"
+      volumes:
+      - "mongodb-data:/data/db"
+
   mysql:
     container_name: MySQL-DB
     image: mysql:9.4
@@ -29,3 +32,4 @@ services:
 
 volumes:
   mysql-data:
+  mongodb-data:
