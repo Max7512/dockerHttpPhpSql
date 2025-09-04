@@ -42,19 +42,19 @@ Les serveurs peuvent être manipulés en totalité ou individuellement selon le 
 
 La commande de lancement est comme si dessous, l'option d permet de lancer le serveur en arrière plan, ce qui évite d'afficher les logs du serveur constament, bloquant ainsi le terminal jusqu'à sortir manuellement des logs du serveur.
 ```bash
-docker-compose up [-d] [apache | mysql]
+docker-compose up [-d] [apache | mysql | mongo]
 ```
 
 ### Arrêter les serveurs
 
 Cette commande permet d'arrêter des services sans nécessairement les effacer tout comme leur données qui peuvent être réutilisées à la prochaine utilisation du serveur.
 ```bash
-docker-compose down [apache | mysql]
+docker-compose down [apache | mysql | mongo]
 ```
 
 ### Redémarrer les serveurs
 
 Cette commande permet de redémarrer des services pour appliquer des changements de configuration ou en cas d'erreur par exemple.
 ```bash
-docker-compose restart [apache | mysql]
+docker-compose restart [apache | mysql | mongo]
 ```
